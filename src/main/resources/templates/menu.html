@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html lang="pt" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Welcome</title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+        <script type="text/javascript" th:src="@{/recebe-login.js}" />
+        <link th:href="@{/materialize.min.css}" media="all" rel="stylesheet" type="text/css"/>
+        <link th:href="@{/materialize.css}" media="all" rel="stylesheet" type="text/css"/>
+        <link th:href="@{/style.css}" media="all" rel="stylesheet" type="text/css"/>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    </head>
+    <body class="parallax">
+        <header>
+            <nav>
+                <div class="container">
+                    <div class="nav-wrapper">
+                        <a href="index.html" class="brand-logo">Simple Crud</a>
+                        <ul class="right side-nav" id="nav-mobile" style="transform: translateX(-100%);">
+                            <li class="hide-on-small-only"><a href="collapsible.html"><i class="material-icons">arrow_back</i></a></li>
+                        </ul>
+                        <a class="button-collapse" href="#" data-activates="nav-mobile"><i class="material-icons">menu</i></a>
+                    </div>
+                </div>
+            </nav>
+
+        </header>
+        <div class="parallax-container">
+            <div class="parallax"><img th:src="@{/images/galaxy1.jpg}" style="display: block;position: fixed; transform: translate3d(-50%, 0px, 0px);"/></div>
+        </div>
+        <div class="section white">
+            <div class="row container">
+                <center> <h3 class="header">Welcome, Choose an option</h3> </center>
+                
+                <center>
+                 <a class="btn-floating btn-large waves-effect teal lighten-2 class" th:href="@{/sistema/cadastro}"><i class="material-icons">add</i></a>
+                 <a class="btn-floating btn-large waves-effect teal lighten-2 class" th:href="@{/sistema/cadastro}"><i class="material-icons">assignment</i></a>
+                </center> 
+                 
+                  
+            </div>
+        </div>
+        <div class="parallax-container">
+            <div class="parallax">
+                <img th:src="@{/images/cave.jpg}" style="display: block;position: fixed;transform: translate3d(-50%, 10px, 0px);"/>
+            </div>
+        </div>
+
+        <!-- Modal Structure -->
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <h4>Modal Header</h4>
+                <p>A bunch of text</p>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+            </div>
+        </div>
+
+
+        <footer class="page-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col l6 s12">
+                        <h5 class="white-text">Simple Crud</h5>
+                        <p class="grey-text text-lighten-4">Materialize Footer Template</p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <div class="container">
+                    Desenvolvido por Robson Junior
+                    <a class="grey-text text-lighten-4 right" href="https://github.com/cardozorobson">GitHub</a>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

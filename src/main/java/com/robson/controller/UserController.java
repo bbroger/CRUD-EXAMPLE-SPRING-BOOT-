@@ -26,6 +26,13 @@ public class UserController {
     @Autowired
     UserServiceImpl userService;
     
+    @GetMapping("/menu")
+    public String menu(){
+        
+        return "/menu";
+    }
+    
+    
     @GetMapping("/cadastro")
     public ModelAndView telaRegistro(User user){
         ModelAndView model = new ModelAndView("/index");
@@ -34,10 +41,10 @@ public class UserController {
         return model;
     }
     
-    @PostMapping("/cadatro")
+    @PostMapping("/cadastro")
     public String salvaUser(User user){
         userService.cadastrarUsuario(user);
-        return ("redirect:/sys/cadatro");
+        return ("redirect:/sistema/cadastro");
     }
     
     @GetMapping("/lista")
