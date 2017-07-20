@@ -46,9 +46,9 @@ public class User implements Serializable{
     @NotNull
     private String email;
     
-    @Column(name="sexo")
-    @Enumerated(EnumType.STRING)
-    private TiposSexo sexo;
+//    @Column(name="sexo")
+//    @Enumerated(EnumType.STRING)
+//    private TiposSexo sexo;
     
     @Column(name="telefone")
     @NotNull
@@ -87,13 +87,13 @@ public class User implements Serializable{
         this.email = email;
     }
 
-    public TiposSexo getSexo() {
-        return sexo;
-    }
-
-    public void setSexo(TiposSexo sexo) {
-        this.sexo = sexo;
-    }
+//    public TiposSexo getSexo() {
+//        return sexo;
+//    }
+//
+//    public void setSexo(TiposSexo sexo) {
+//        this.sexo = sexo;
+//    }
 
     public String getTelefone() {
         return telefone;

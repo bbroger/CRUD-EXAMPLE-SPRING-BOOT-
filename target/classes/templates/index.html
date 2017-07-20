@@ -31,7 +31,7 @@ and open the template in the editor.
         </div>
         <div class="section white">
             <div class="row container">
-                <h2 class="header">Cadastro</h2>
+                <center><h2 class="header">Cadastro</h2></center>
                 <form th:action="@{/sistema/cadastro}" method="post" th:object="${user}" class="col s12">
                     <div class="row">
                         <div class="input-field col s6">
@@ -58,23 +58,27 @@ and open the template in the editor.
 
                         </div>
 
-                        <div class="input-field col s12">
+<!--                        <div class="input-field col s12">
                             <select th:field="*{sexo}">
                                 <option th:each="sexo : ${T(com.robson.orders.TiposSexo).values()}" th:value="${sexo}" th:text="${sexo}"></option>
 
                             </select>
 
-                        </div>
+                        </div>-->
                         <br></br>
                         <center>
-                            <button class="btn waves-effect waves-light" type="submit" name="action">Cadastrar
+                            <button class="btn waves-effect waves-light"  onclick="Materialize.toast('I am a toast', 4000)" type="submit" name="action">Cadastrar
                                 <i class="material-icons right">send</i>
                             </button>
                         </center>
+                         
 
 
                     </div>
                 </form>
+                 <div class="fixed-action-btn horizontal">
+                  <a class="btn-floating btn-large waves-effect teal lighten-2 class" th:href="@{/sistema/menu}"><i class="material-icons">exit_to_app</i></a>
+               </div>
             </div>
         </div>
         <div class="parallax-container">

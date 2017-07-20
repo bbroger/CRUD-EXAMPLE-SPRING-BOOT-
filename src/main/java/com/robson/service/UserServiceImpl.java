@@ -33,5 +33,10 @@ public class UserServiceImpl implements UserService{
         Iterable<User> itr = userRepository.findAll();
         return(List<User>)itr;
     }
+
+    @Override
+    public void deletarUsuario(int id) {
+        userRepository.delete(id);
+    }
     
 }

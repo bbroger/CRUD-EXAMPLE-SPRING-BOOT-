@@ -11,6 +11,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
@@ -49,12 +50,18 @@ public class UserController {
     
     @GetMapping("/lista")
     public ModelAndView listaPage(){
-        ModelAndView model = new ModelAndView("/lista");
+        ModelAndView model = new ModelAndView("/exbUser");
         List<User> list =  userService.getAllUsers();
         
         model.addObject("list",list);
         
         return model;
+    }
+    
+    @GetMapping("/delete/{id}")
+    public String deleteUser(@PathVariable int id){
+        userService.deletarUsuario(id);
+        return ("redirect:/sistema/lista");
     }
     
 }
