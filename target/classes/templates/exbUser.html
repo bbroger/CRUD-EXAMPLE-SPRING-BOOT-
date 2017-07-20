@@ -16,6 +16,7 @@ and open the template in the editor.
         <script type="text/javascript" th:src="@{/modal.js}" />
         <script type="text/javascript" th:src="@{/jquery-1.12.3.min}" />
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+        <link rel="shortcut icon" type="image/png" th:href="@{/images/favicon.png}"/>
        
     </head>
     <body>
@@ -23,7 +24,7 @@ and open the template in the editor.
             <nav>
                 <div class="container">
                     <div class="nav-wrapper">
-                        <a href="index.html" class="brand-logo">Simple Crud - Spring Boot</a>
+                        <a th:href="@{/sistema/menu}" class="brand-logo">Simple Crud - Spring Boot</a>
                         <ul class="right side-nav" id="nav-mobile" style="transform: translateX(-100%);">
                             <li class="hide-on-small-only"><a href="collapsible.html"><i class="material-icons">arrow_back</i></a></li>
                         </ul>

@@ -16,13 +16,14 @@ and open the template in the editor.
         <link th:href="@{/materialize.css}" media="all" rel="stylesheet" type="text/css"/>
         <link th:href="@{/style.css}" media="all" rel="stylesheet" type="text/css"/>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+        <link rel="shortcut icon" type="image/png" th:href="@{/images/favicon.png}"/>
     </head>
     <body class="parallax">
         <header>
             <nav>
                 <div class="container">
                     <div class="nav-wrapper">
-                        <a href="index.html" class="brand-logo">Simple Crud - Spring Boot</a>
+                        <a th:href="@{/sistema/menu}" class="brand-logo">Simple Crud - Spring Boot</a>
                         <ul class="right side-nav" id="nav-mobile" style="transform: translateX(-100%);">
                             <li class="hide-on-small-only"><a href="collapsible.html"><i class="material-icons">arrow_back</i></a></li>
                         </ul>
@@ -37,12 +38,12 @@ and open the template in the editor.
         </div>
         <div class="section white">
             <div class="row container">
-                <center> <h4 class="header">Welcome, Choose an option</h4> </center>
+                <center> <h4 class="header">Olá,escolha uma opção </h4> </center>
 
                 <center>
                     <p>Cadastrar</p>
                     <a class="btn-floating btn-large waves-effect teal lighten-2 class" th:href="@{/sistema/cadastro}"><i class="material-icons">add</i>
-                        <label>Cadastrar</label>
+                    
                     </a>
                     <p>Exibir</p>
                     <a class="btn-floating btn-large waves-effect teal lighten-2 class" th:href="@{/sistema/lista}"><i class="material-icons">assignment</i></a>
