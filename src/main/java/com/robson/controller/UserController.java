@@ -64,4 +64,15 @@ public class UserController {
         return ("redirect:/sistema/lista");
     }
     
+    @GetMapping("/edit/{id}")
+    public ModelAndView editarUser(@PathVariable int id, User user){
+       ModelAndView model = new ModelAndView("/editUser");
+       
+       user = userService.findById(id);
+       
+       model.addObject("user",user);
+       
+       return model;
+    }
+    
 }

@@ -22,4 +22,6 @@ public interface UserService {
     
     public void deletarUsuario(int id);
     
+    public User findById(int id);
+    
 }
