@@ -23,56 +23,56 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 @RequestMapping("/sistema")
 public class UserController {
-    
+
     @Autowired
     UserServiceImpl userService;
-    
+
     @GetMapping("/menu")
-    public String menu(){
-        
+    public String menu() {
+
         return "/menu";
     }
-    
-    
+
     @GetMapping("/cadastro")
-    public ModelAndView telaRegistro(User user){
+    public ModelAndView telaRegistro(User user) {
         ModelAndView model = new ModelAndView("/index");
-        model.addObject("user",user);
-        
+        model.addObject("user", user);
+
         return model;
     }
-    
+
     @PostMapping("/cadastro")
-    public String salvaUser(User user){
+    public String salvaUser(User user) {
         userService.cadastrarUsuario(user);
-        return ("redirect:/sistema/cadastro");
+        return ("redirect:/sistema/menu");
     }
-    
+
     @GetMapping("/lista")
-    public ModelAndView listaPage(){
+    public ModelAndView listaPage() {
         ModelAndView model = new ModelAndView("/exbUser");
-        List<User> list =  userService.getAllUsers();
-        
-        model.addObject("list",list);
+        List<User> list = userService.getAllUsers();
+
+        model.addObject("list", list);
         
         return model;
     }
-    
+
     @GetMapping("/delete/{id}")
-    public String deleteUser(@PathVariable int id){
+    public String deleteUser(@PathVariable int id) {
         userService.deletarUsuario(id);
         return ("redirect:/sistema/lista");
     }
-    
+
     @GetMapping("/edit/{id}")
-    public ModelAndView editarUser(@PathVariable int id, User user){
-       ModelAndView model = new ModelAndView("/editUser");
-       
-       user = userService.findById(id);
-       
-       model.addObject("user",user);
-       
-       return model;
+    public ModelAndView editarUser(@PathVariable int id, User user) {
+        ModelAndView model = new ModelAndView("/editUser");
+
+        user = userService.findById(id);
+
+        model.addObject("user", user);
+
+        return model;
     }
+
     
 }
