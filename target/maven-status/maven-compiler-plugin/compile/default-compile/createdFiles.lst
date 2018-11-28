@@ -3,5 +3,5 @@ com/robson/repository/UserRepository.class
 com/robson/BasicApplication.class
 com/robson/service/UserServiceImpl.class
 com/robson/controller/UserController.class
-com/robson/entity/User.class
 com/robson/service/UserService.class
+com/robson/entity/User.class
